@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhậu nhé</title>
+</head>
+<body>
+<form th:object="${user}">
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+        <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+    </button>
+    <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+    </button>
+    <div>
+        <p>Username</p>
+        <label th:text="${user.getUserName()}"/>
+    </div>
+    <div>
+        <p>password</p>
+        <label th:text="${user.getPwd()}"/>
+    </div>
+    <div>
+        <p>email</p>
+        <label th:text="${user.getEmail()}"/>
+    </div>
+    <div>
+        <p>age</p>
+        <label th:text="${user.getAge()}"/>
+    </div>
+
+</form>
+</body>
+</html>
